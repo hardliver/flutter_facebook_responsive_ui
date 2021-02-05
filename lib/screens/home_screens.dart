@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_facebook_responsive_ui/widgets/circle_button.dart';
+import 'package:flutter_facebook_responsive_ui/widgets/create_post_container.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 
 import '../config/palette.dart';
+import '../data/data.dart';
 
 class HomeScreen extends StatelessWidget {
   @override
@@ -36,6 +38,9 @@ class HomeScreen extends StatelessWidget {
                 onPressed: () => print('Message'),
               ),
             ],
+          ),
+          SliverToBoxAdapter(
+            child: CreatePostContainer(currentUser:currentUser),
           ),
         ],
       ),
